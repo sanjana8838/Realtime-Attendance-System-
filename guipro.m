@@ -23,7 +23,7 @@ function varargout = guipro(varargin)
 
 % Edit the above text to modify the response to help guipro
 
-% Last Modified by GUIDE v2.5 20-Aug-2020 00:17:42
+% Last Modified by GUIDE v2.5 22-Aug-2020 11:12:28
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -126,10 +126,8 @@ while true
         start(handles.vid);
         handles.vid.ReturnedColorspace = 'rgb';
         im= getsnapshot(handles.vid);
-        savepath = 'C:\Users\Ramesh PC\Pictures';  %the folder
-        nametemplate = 'image_%04d.tif';  %name pattern
         imshow(im);
-        imwrite(im,'C:\Users\Ramesh PC\Pictures\trial.jpg');
+        imwrite(im,'C:\Users\Ramesh PC\Documents\MATLAB\Face Recog Project\githubtrial\trial.jpg');
         break;
      catch
         break;
@@ -150,3 +148,9 @@ objects = imaqfind;
 delete(objects);
 
 
+% --- Executes on button press in pushbutton5.
+function pushbutton5_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+recognition()
