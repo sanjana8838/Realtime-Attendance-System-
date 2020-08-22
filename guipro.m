@@ -127,7 +127,7 @@ while true
         handles.vid.ReturnedColorspace = 'rgb';
         im= getsnapshot(handles.vid);
         imshow(im);
-        imwrite(im,'C:\Users\Ramesh PC\Documents\MATLAB\Face Recog Project\githubtrial\trial.jpg');
+        imwrite(im,'C:\trial.jpg');
         break;
      catch
         break;
